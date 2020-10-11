@@ -38,7 +38,7 @@ export default class Client {
       request.withCredentials = true
 
       // When authenticating using cookies, X-CSRF-Token header must be set
-      if (request.url.indexOf('/rest/session/token') === -1) {
+      if (request.url.indexOf('/session/token') === -1) {
         const xCsrfToken = await this._fetchCSRFToken()
         request.headers['X-CSRF-Token'] = xCsrfToken
       }
