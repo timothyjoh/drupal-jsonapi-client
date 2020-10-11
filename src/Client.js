@@ -20,7 +20,7 @@ export default class Client {
     }
 
     const response = await this.send({
-      url: '/rest/session/token',
+      url: '/session/token',
       method: 'GET',
     })
     return response.data
